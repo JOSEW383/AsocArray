@@ -36,4 +36,9 @@ public class asocArrayTest {
 		assertEquals(2,array.size());
 	}
 
+	@Test(expected = UndefinedKeyException.class)
+	public void elevoExcepcionClaveNoEncontrada(){
+		array.get("nombre");
+	}
+	
 }
