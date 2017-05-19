@@ -7,8 +7,9 @@ import org.junit.Test;
 public class asocArrayTest {
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void creacionDelArray() {
+		AsocArray array = new AsocArray();
+		assertEquals(0, array.size());
 	}
 
 }
