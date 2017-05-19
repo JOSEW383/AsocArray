@@ -4,7 +4,9 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class asocArrayTest {
+import asocArray.AsocArray;
+
+public class AsocArrayTest {
 
 	@Test
 	public void creacionDelArray() {
