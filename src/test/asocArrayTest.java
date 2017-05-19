@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import asocArray.AsocArray;
 
-public class AsocArrayTest {
+public class asocArrayTest {
 
 	@Test
 	public void creacionDelArray() {
