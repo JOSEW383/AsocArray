@@ -42,4 +42,12 @@ public class asocArrayTest {
 		array.get("nombre");
 	}
 	
+	@Test
+	public void devuelveValorPorDefecto(){
+		array.put("nombre","luis");
+		assertEquals("luis", array.getOrElse("nombre","nulo"));
+		assertEquals("nulo", array.getOrElse("apellidos","nulo"));
+		
+	}
+	
 }
