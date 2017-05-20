@@ -56,4 +56,9 @@ public class asocArrayTest {
 		assertEquals(true, array.containsKey("nombre"));
 	}
 	
+	@Test
+	public void keyNoExiste(){
+		assertEquals(false, array.containsKey("nombre"));
+	}
+	
 }
