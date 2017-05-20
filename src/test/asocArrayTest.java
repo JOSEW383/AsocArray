@@ -7,6 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import asocArray.AsocArray;
+import asocArray.UndefinedKeyException;
 
 public class asocArrayTest {
 	private AsocArray array;

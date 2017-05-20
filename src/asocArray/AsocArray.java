@@ -28,6 +28,6 @@ public class AsocArray {
 				return map[i][1];
 			}
 		}
-		return "";
+		throw new UndefinedKeyException("No se ha encontrado el key");
 	}
 }
