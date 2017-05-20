@@ -30,4 +30,14 @@ public class AsocArray {
 		}
 		throw new UndefinedKeyException("No se ha encontrado el key");
 	}
+
+	public String getOrElse(String key, String defecto) {
+		String pal;
+		try{
+			pal=get(key);
+		}catch(UndefinedKeyException e){
+			pal=defecto;
+		}
+		return pal;
+	}
 }
