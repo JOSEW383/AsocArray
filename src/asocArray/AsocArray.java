@@ -49,4 +49,21 @@ public class AsocArray {
 		}
 		return true;
 	}
+
+	public boolean remove(String key) {
+		int n=0;
+		while((map[n][0]!=key)&&(n<tam)){
+			n++;
+		}if(n==tam){
+			return false;
+		}else{
+			while(n!=tam){
+				map[n][0]=map[n+1][0];
+				n++;
+			}
+			tam--;
+			return true;
+		}
+	}
+	
 }
