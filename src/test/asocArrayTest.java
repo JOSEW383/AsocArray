@@ -11,6 +11,7 @@ import asocArray.UndefinedKeyException;
 
 public class asocArrayTest {
 	private AsocArray array;
+	private static final String KEY1="Nombre",VALUE1="Luis",KEY2="Apellidos",VALUE2="Martin";
 	
 	@Before
 	public void before(){
@@ -31,41 +32,41 @@ public class asocArrayTest {
 	
 	@Test
 	public void anadoValoresYClaves(){
-		array.put("nombre","luis");
-		array.put("apellidos","martin");
-		assertEquals("luis", array.get("nombre"));
+		array.put(KEY1,VALUE1);
+		array.put(KEY2,VALUE2);
+		assertEquals(VALUE1, array.get(KEY1));
 		assertEquals(2,array.size());
 	}
 
 	@Test(expected = UndefinedKeyException.class)
 	public void elevoExcepcionClaveNoEncontrada(){
-		array.get("nombre");
+		array.get(KEY1);
 	}
 	
 	@Test
 	public void devuelveValorPorDefecto(){
-		array.put("nombre","luis");
-		assertEquals("luis", array.getOrElse("nombre","nulo"));
-		assertEquals("nulo", array.getOrElse("apellidos","nulo"));
+		array.put(KEY1,VALUE1);
+		assertEquals(VALUE1, array.getOrElse(KEY1,"nulo"));
+		assertEquals("nulo", array.getOrElse(KEY2,"nulo"));
 		
 	}
 	
 	@Test
 	public void keyExiste(){
-		array.put("nombre","luis");
-		assertEquals(true, array.containsKey("nombre"));
+		array.put(KEY1,VALUE1);
+		assertEquals(true, array.containsKey(KEY1));
 	}
 	
 	@Test
 	public void keyNoExiste(){
-		assertEquals(false, array.containsKey("nombre"));
+		assertEquals(false, array.containsKey(KEY1));
 	}
 	
 	@Test
 	public void eliminacionDePares(){
-		array.put("nombre","luis");
-		assertEquals(true,array.remove("nombre"));
-		assertEquals(false,array.remove("nombre"));
+		array.put(KEY1,VALUE1);
+		assertEquals(true,array.remove(KEY1));
+		assertEquals(false,array.remove(KEY1));
 	}
 	
 }
