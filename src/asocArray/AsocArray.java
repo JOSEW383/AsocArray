@@ -45,7 +45,7 @@ public class AsocArray {
 		try{
 			get(key);
 		}catch(UndefinedKeyException e){
-			
+			return false;
 		}
 		return true;
 	}
