@@ -40,4 +40,13 @@ public class AsocArray {
 		}
 		return pal;
 	}
+
+	public boolean containsKey(String key) {
+		try{
+			get(key);
+		}catch(UndefinedKeyException e){
+			
+		}
+		return true;
+	}
 }

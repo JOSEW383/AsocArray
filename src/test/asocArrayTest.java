@@ -50,6 +50,7 @@ public class asocArrayTest {
 		
 	}
 	
+	@Test
 	public void keyExiste(){
 		array.put("nombre","luis");
 		assertEquals(true, array.containsKey("nombre"));
