@@ -61,4 +61,11 @@ public class asocArrayTest {
 		assertEquals(false, array.containsKey("nombre"));
 	}
 	
+	@Test
+	public void eliminacionDePares(){
+		array.put("nombre","luis");
+		assertEquals(true,array.remove("nombre"));
+		assertEquals(false,array.remove("nombre"));
+	}
+	
 }
